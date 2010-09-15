@@ -1,4 +1,4 @@
-package multipoly;
+package converttomultipoly;
 
 import static org.openstreetmap.josm.tools.I18n.tr;
 
@@ -10,15 +10,16 @@ import org.openstreetmap.josm.plugins.Plugin;
 import org.openstreetmap.josm.plugins.PluginInformation;
 
 /**
- * A plugin to create multipolygon automatically
+ * A plugin to simply convert an area to a multipolygon
  */
 public class MultipolyPlugin extends Plugin {
 
     protected String name;
 
-    public MultipolyPlugin(PluginInformation info) {
+//        public MultipolyPlugin(PluginInformation info) {
+        public MultipolyPlugin(PluginInformation info) {
         super(info);
-        name = tr("Create multipolygon");
+        name = tr("Convert to multipolygon");
         JMenu toolsMenu = null;
         for (int i = 0; i < Main.main.menu.getMenuCount() && toolsMenu == null; i++) {
             JMenu menu = Main.main.menu.getMenu(i);
